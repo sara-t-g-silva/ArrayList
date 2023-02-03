@@ -2,7 +2,7 @@ package br.com.alura.tests;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.Comparator;
 
 import br.com.alura.models.Aula;
 
@@ -22,16 +22,19 @@ public class TestandoListasDeAula {
 		
 		System.out.println(aulas);
 		
-		extracted(aulas);
+		extracted(aulas);//pesquisar depois!
 		
 		System.out.println(aulas);
 		
+		aulas.sort(Comparator.comparing(Aula::getTempo));// outra forma de comparar, mas pelo tempo
 		
-		
+		System.out.println(aulas);
 	}
 
 	private static void extracted(ArrayList<Aula> aulas) {
 		Collections.sort(aulas);
 	}
+	
+	
 
 }
